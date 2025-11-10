@@ -1,7 +1,10 @@
 from abc import ABC, abstractmethod
 from typing import Any, Dict, List
 import requests
-import HH_API_URL
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 class BaseAPI(ABC):
 
@@ -11,7 +14,7 @@ class BaseAPI(ABC):
 
 
 class HH_API(BaseAPI):
-        BASE_URL = f"{HH_API_URL}/vacancies"
+        BASE_URL = os.getenv('HH_API_URL')
 
 
         def get_vacancies(
