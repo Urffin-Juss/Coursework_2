@@ -9,11 +9,12 @@ load_dotenv()
 class BaseAPI(ABC):
 
     @abstractmethod
-    def get_vacancies(self, *arg, **kwargs) -> list[Dict[str, Any]:
+    def get_vacancies(self, *args, **kwargs) -> list[Dict[str, Any]]:
         pass
 
 
-class HH_API(BaseAPI):
+class HHAPI(BaseAPI):
+
         BASE_URL = os.getenv('HH_API_URL')
 
 
@@ -23,7 +24,7 @@ class HH_API(BaseAPI):
                 page: int = 0,
                 per_page: int = 50,
                 area: int = 123,
-        ): -> list[Dict[str, Any]]:
+        ) -> list[Dict[str, Any]]:
                 params = {
                     "text" : text,
                     "page" : page,

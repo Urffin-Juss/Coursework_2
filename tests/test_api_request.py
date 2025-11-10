@@ -1,6 +1,5 @@
-from typing import Any, Dict, List
-
-from api_request import HHAPI
+from typing import Any, Dict
+from src.api_request import HHAPI
 
 
 class DummyResponse:
