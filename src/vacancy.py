@@ -50,7 +50,6 @@ class Vacancy:
             employer=employer,
         )
 
-
     def __lt__(self, other: "Vacancy") -> bool:
         return self.salary < other.salary
 

@@ -26,7 +26,6 @@ class BaseStorage(ABC):
         pass
 
 
-
 class JSONStorage(BaseStorage):
 
     def __init__(self, filepath: str = "data/vacancies.json") -> None:
@@ -34,7 +33,6 @@ class JSONStorage(BaseStorage):
         self.filepath.parent.mkdir(parents=True, exist_ok=True)
         if not self.filepath.exists():
             self.filepath.write_text("[]", encoding="utf-8")
-
 
     def save_vacancies(self, vacancies: List[Vacancy]) -> None:
         data = [
@@ -74,6 +72,3 @@ class JSONStorage(BaseStorage):
         vacancies = self.load_vacancies()
         filtered = [v for v in vacancies if v.title != title]
         self.save_vacancies(filtered)
-
-
-

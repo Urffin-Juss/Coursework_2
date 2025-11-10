@@ -9,7 +9,7 @@ load_dotenv()
 class BaseAPI(ABC):
 
     @abstractmethod
-    def get_vacancies(self, *arg, **kwargs) -> list[Dict[[str, Any]]:
+    def get_vacancies(self, *arg, **kwargs) -> list[Dict[str, Any]:
         pass
 
 
