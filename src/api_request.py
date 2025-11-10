@@ -13,7 +13,8 @@ class BaseAPI(ABC):
         pass
 
 
-class HH_API(BaseAPI):
+class HHAPI(BaseAPI):
+
         BASE_URL = os.getenv('HH_API_URL')
 
 
