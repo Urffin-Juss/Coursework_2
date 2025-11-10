@@ -4,7 +4,7 @@ from abc import ABC, abstractmethod
 from pathlib import Path
 from typing import List
 
-from src.vacancy import Vacancy
+from vacancy import Vacancy
 
 
 class BaseStorage(ABC):
